@@ -12,3 +12,17 @@ export const DeviceContainer = styled.ul`
   margin-top: 40px;
   padding: 0;
 `;
+
+export const DeviceNotFound = styled.div`
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border: 1px solid yellow;
+
+  p {
+    font-size: 20px;
+    color: red;
+  }
+`;

@@ -1,15 +1,9 @@
 import React from "react";
-import Device from "../components/Device";
-import styled from "styled-components";
+import Device from "../components/device/Device";
 
-const Title = styled.h2`
-  font-size: 30px;
-  text-align: center;
-`;
 const DevicePage = () => {
   return (
     <>
-      <Title>Add Device</Title>
       <Device />
     </>
   );

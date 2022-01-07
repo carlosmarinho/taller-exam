@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 const HeaderContainer = styled.div`
   display: flex;
   width: 100%;
-  height: 40px;
+  height: 50px;
   align-items: center;
-  background-color: lightgray;
+  background-color: #4abfe2;
   justify-content: space-between;
 `;
 
@@ -17,27 +17,39 @@ const Logo = styled.div`
   img {
     height: 35px;
   }
+  a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bolder;
+  }
 `;
 
 const Menu = styled.nav`
   display: flex;
   width: 90%;
   color: "#fff";
-  height: 40px;
+  height: 50px;
   justify-content: center;
 
   ul {
     display: flex;
     list-style: none;
+    margin-left: -15%;
   }
 `;
 
 const MenuItem = styled.li`
-  margin-right: 10px;
+  margin-right: 30px;
   cursor: pointer;
 
-  :hover {
-    color: "#666";
+  a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bolder;
+
+    hover {
+      color: red;
+    }
   }
 `;
 
@@ -49,12 +61,12 @@ export default function Header() {
       </Logo>
       <Menu>
         <ul>
-          <Link to="/">
-            <MenuItem>Dashboard</MenuItem>
-          </Link>
-          <Link to="/device">
-            <MenuItem>Device</MenuItem>
-          </Link>
+          <MenuItem>
+            <Link to="/">Dashboard</Link>
+          </MenuItem>
+          <MenuItem>
+            <Link to="/device">Create Device</Link>
+          </MenuItem>
         </ul>
       </Menu>
     </HeaderContainer>
